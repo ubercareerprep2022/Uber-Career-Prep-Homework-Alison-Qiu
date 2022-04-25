@@ -9,6 +9,7 @@ class Node(object):
         self.next_node = node
     def getNextNode(self):
         return self.next_node
+
 class LinkedList(object):
     def __init__ (self):
         self.head = None
@@ -80,10 +81,12 @@ class LinkedList(object):
         lst = []
         while cur is not None:
             lst.append(cur.data)
+            print('lst:',lst)
             if cur.next_node:
                 cur = cur.next_node
             else:
                 cur = None
+            cur = self.head
         return lst
 
     def hasCycle(self):
@@ -101,6 +104,7 @@ class LinkedList(object):
         return False
 
     def isPalindrome(self):
+        #print('isPalindrome')
         lst = self.printList()
         l = 0
         r = len(lst)-1
@@ -115,30 +119,30 @@ llist = LinkedList()
  
 
 
-# a = Node('8')
-# llist.push(Node('cycle'))
-# llist.push(Node('lol'))
-# llist.push(Node('3'))
-# llist.push(Node('7'))
-# print(llist.printList())
-# llist.pop()
-# print(llist.printList())
-# llist.push(Node('lol'))
-# print(llist.printList())
-# print('insert 8')
-# llist.insert(2,a)
-# print(llist.printList())
-# print('remove element')
-# llist.remove(3)
-# print(llist.printList())
-# print('element at ')
-# print(llist.element_at(4))
-# print(llist.size())
-# print('has cycle: ', llist.hasCycle())
-# print(llist.printList())
-# print('has cycle: ', llist.hasCycle())
-# llist.insert(3,a)
-# print(llist.printList())
-# print(llist.isPalindrome())
+a = Node('8')
+llist.push(Node('cycle'))
+llist.push(Node('lol'))
+llist.push(Node('3'))
+llist.push(Node('7'))
+print(llist.printList())
+llist.pop()
+print(llist.printList())
+llist.push(Node('lol'))
+print(llist.printList())
+print('insert 8')
+llist.insert(2,a)
+print(llist.printList())
+print('remove element')
+llist.remove(3)
+print(llist.printList())
+print('element at ')
+print(llist.element_at(4))
+print(llist.size())
+print('has cycle: ', llist.hasCycle())
+print(llist.printList())
+print('has cycle: ', llist.hasCycle())
+llist.insert(3,a)
+#print(llist.printList())
+#print(llist.isPalindrome())
 
 
